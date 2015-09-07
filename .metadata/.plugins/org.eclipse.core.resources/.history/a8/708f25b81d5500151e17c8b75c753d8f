@@ -1,0 +1,81 @@
+package primenumberlister;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PrimeNumberLister {
+
+	static int numberOfPrimesInput;
+	static ArrayList<Integer> primesFound = new ArrayList<Integer>();
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println("How many primes would you like to generate? ");
+		Scanner scan = new Scanner(System.in);
+		
+		float startTime = System.nanoTime();
+		
+		numberOfPrimesInput = scan.nextInt();
+		
+		
+		searchForPrimes(numberOfPrimesInput);//Search for primes
+
+		float elapsedTime = System.nanoTime() - startTime;
+		float elapsedTimeSec = elapsedTime/1000000000;
+		//float elapsedTimeSec = elapsedTimeMili/1000;
+		System.out.println("Calculation time: " + elapsedTimeSec + " seconds.");
+		System.out.println("Primes found: " + primesFound);
+		
+		scan.close();
+	}
+	
+	public static void searchForPrimes(int numberOfPrimes){
+		
+		float numOfPrimesFound = 0;
+		float numberTested = 2;
+		
+		while (numOfPrimesFound < numberOfPrimes) //while the amount of primes found is less than the number of primes requested
+		{		
+			if(isPrime(numberTested))
+			{
+				primesFound.add((int)numberTested); //add number to list of primes
+				
+				numOfPrimesFound++;
+			}
+			numberTested++; //moves to the next number
+			
+		}	
+	}
+	
+	public static boolean isPrime(float numTested){ //checks to see if number is prime
+		
+		float divider = 1;		
+		
+		float factorCounter = 0;
+			
+		while (divider <= numTested)
+		{
+			float testResult = numTested/divider;
+			if (testResult == (int)testResult){
+				factorCounter++;
+			}
+			divider++;
+		}
+		
+		
+		if (factorCounter < 3) //if the number is prime
+		{
+			divider = 1; //reset divider
+			factorCounter = 0;
+			return true;
+		}
+		else{ //if the number isn't prime
+			divider = 1; //reset divider
+			factorCounter = 0;
+			return false;
+		}
+		
+	}
+
+}

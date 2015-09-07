@@ -1,0 +1,70 @@
+package primenumbercalculator;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PrimeNumberCalculator {
+
+	public static void main(String[] args) {
+		
+		
+		int divider = 0;
+		int counter = 0;
+		int counterForDividers = 0;
+		
+		
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter a number, and I will determine if it is prime. ");
+		String input = scan.nextLine();
+		
+		long startTime = System.nanoTime();
+		
+		
+		double inputDoub = Double.parseDouble(input);
+		double testForTwo = inputDoub/2;
+		
+		ArrayList<Integer> divisibleBy = new ArrayList<Integer>();
+		while (divider <= inputDoub)
+		{
+			if(testForTwo == (int)testForTwo){
+				break;
+			}
+			
+			double testResult = inputDoub/divider;
+			if(testResult == (int)testResult){ //checks to see if the answer is a whole number
+				divisibleBy.add((int)divider);
+				counter++;
+				divider++;
+			}
+			else{
+				divider++;
+			}
+			counterForDividers++;
+			
+			if (counterForDividers == 100000000){
+				System.out.println("100,000,000 numbers have been checked since last checkin");
+				counterForDividers = 0;
+			}
+			
+		}	
+		long elapsedTime = System.nanoTime() - startTime;
+		System.out.println("Calculation time is: " + elapsedTime/1000000 + " miliseconds.");
+		
+		if (counter > 2)
+		{
+			System.out.print("The number " + inputDoub + " is not prime. ");
+		}
+		else
+		{
+			System.out.print("The number " + inputDoub + " is prime. ");
+		}
+		
+		System.out.print("The factors of " + (int)inputDoub + ": " + divisibleBy);
+		
+		
+		
+		scan.close();
+	}
+
+}
