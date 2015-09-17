@@ -1,0 +1,14 @@
+package numbermultiplecreater;
+
+import java.util.Scanner;
+
+public class NumberMultipleCreater {
+
+	public static void main(String[] args) {
+		
+		System.out.println("What number would you like to generate multiples of? ");
+		Scanner scan1 = new Scanner(System.in);
+		
+	}
+	
+}
