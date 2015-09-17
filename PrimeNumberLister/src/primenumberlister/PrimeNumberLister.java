@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class PrimeNumberLister {
 
-	static float numberOfPrimesInput;
-	static ArrayList<Float> primesFound = new ArrayList<Float>();
+	static double numberOfPrimesInput;
+	static ArrayList<Double> primesFound = new ArrayList<Double>();
 	
 	
 	public static void main(String[] args) {
@@ -37,10 +37,12 @@ public class PrimeNumberLister {
 		scan.close();
 	}
 	
-	public static void searchForPrimes(float numberOfPrimes){
+	public static void searchForPrimes(double numberOfPrimes){
 		
-		float numOfPrimesFound = 0;
-		float numberTested = 2;
+		double numOfPrimesFound = 0;
+		double numOPFPercent = 0;
+		double numberTested = 2;
+		
 		
 		while (numOfPrimesFound < numberOfPrimes) //while the amount of primes found is less than the number of primes requested
 		{		
@@ -49,17 +51,24 @@ public class PrimeNumberLister {
 				primesFound.add(numberTested); //add number to list of primes
 				
 				numOfPrimesFound++;
+				numOPFPercent++;
 			}
 			numberTested++; //moves to the next number
+			
+			if (numOPFPercent == 100){
+				double percentage = (numOfPrimesFound/numberOfPrimesInput)*100;
+				System.out.println("Percentage of calculations completed: " + percentage + "%.");
+				numOPFPercent = 0;
+			}
 			
 		}	
 	}
 	
-	public static boolean isPrime(float numTested){ //checks to see if number is prime
+	public static boolean isPrime(double numTested){ //checks to see if number is prime
 		
-		float divider = 1;		
+		double divider = 1;		
 		
-		float factorCounter = 0;
+		double factorCounter = 0;
 			
 		while (divider <= numTested)
 		{
