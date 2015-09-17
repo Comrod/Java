@@ -1,0 +1,26 @@
+package numbermultiplecreater;
+
+import java.util.Scanner;
+
+public class NumberMultipleCreater {
+
+	public static void main(String[] args) {
+		
+		int baseMultiple;
+		int numberOfMultiples;
+		
+		System.out.println("What number would you like to generate multiples of? ");
+		Scanner scan1 = new Scanner(System.in);
+		baseMultiple = scan1.nextInt();
+		
+		System.out.println("How many multiples would you like to generate?");
+		numberOfMultiples = scan1.nextInt();
+		
+	}
+	
+	public void findMultiples(int multiple, int numOfMult)
+	{
+		
+	}
+	
+}
