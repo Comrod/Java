@@ -13,6 +13,8 @@ public class CommonDivisors {
 
 	    List<Integer> commonDivisor = getCommonDivisor(num1, num2);
 	    System.out.println(commonDivisor);
+	    
+	    scanner.close();
 	}
 
 	public static List<Integer> getCommonDivisor(int num1, int num2) {

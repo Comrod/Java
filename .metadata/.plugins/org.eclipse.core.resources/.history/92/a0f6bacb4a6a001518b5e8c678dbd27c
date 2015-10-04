@@ -1,0 +1,34 @@
+package fourwayspaceinvaders;
+
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+
+import javax.swing.JPanel;
+
+public abstract class Canvas extends JPanel implements KeyListener, MouseListener  {
+
+	private static boolean[] keyboardState = new boolean[525];
+	private static boolean[] mouseState = new boolean[3];
+	
+	public Canvas(){
+		
+		this.setDoubleBuffered(true);
+		this.setFocusable(true);
+		this.setBackground(Color.black);
+		
+		if(false) //If you will draw your own mouse cursor or if you just want that mouse cursor disapear, insert "true" into if condition and mouse cursor will be removed.
+        {
+            BufferedImage blankCursorImg = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
+            Cursor blankCursor = Toolkit.getDefaultToolkit().createCustomCursor(blankCursorImg, new Point(0, 0), null);
+            this.setCursor(blankCursor);
+        }
+		
+		
+	}
+	
+}

@@ -1,0 +1,10 @@
+package fourwayspaceinvaders;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+public class Window extends JFrame {
+	private Window() {
+		
+	}
+}
