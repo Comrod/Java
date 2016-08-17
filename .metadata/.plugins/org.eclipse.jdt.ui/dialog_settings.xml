@@ -6,11 +6,12 @@
 	</section>
 	<section name="FatJarPackageWizard">
 		<item value="C:\Users\Cormac\Documents\Coding\Java" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
-		<item value="PrimeNumberLister - PrimeNumberLister" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
-		<item value="C:\Users\Cormac\Documents\Coding\Java\Runnable Jars\PrimeNumberLister.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="RomanBattleVictorCalculator - Roman Battle Victor Calculator" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
+		<item value="C:\Users\Cormac\Documents\Coding\Java\Runnable Jars\RomanBattleVictorCalculator.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="1" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\Cormac\Documents\Coding\Java\Runnable Jars\RomanBattleVictorCalculator.jar"/>
 			<item value="C:\Users\Cormac\Documents\Coding\Java\Runnable Jars\PrimeNumberLister.jar"/>
 			<item value="C:\Users\Cormac\Documents\Coding\Java\Runnable Jars\PrimeNumberCalculator.jar"/>
 			<item value="C:\Users\Cormac\Documents\Coding\Java\Runnable Jars\NumberMultipleCreater.jar"/>

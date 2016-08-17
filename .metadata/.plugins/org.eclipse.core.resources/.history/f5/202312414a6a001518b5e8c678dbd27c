@@ -1,7 +1,0 @@
-package fourwayspaceinvaders;
-
-import javax.swing.SwingUtilities;
-
-public abstract class Canvas extends JPanel, implements KeyListener, MouseListener {
-
-}

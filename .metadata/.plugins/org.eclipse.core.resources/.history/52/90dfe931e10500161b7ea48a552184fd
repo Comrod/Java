@@ -1,0 +1,40 @@
+package romanbattlevictorcalculator;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class RomanBattleVictorCalculator {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter the number of troops of the Roman army: ");
+		int victorTroops = scan.nextInt();
+		
+		System.out.println("Enter the number of troops of the opposing army: ");
+		int loserTroops = scan.nextInt();
+		
+		scan.close();
+		
+		double strengthRatios[] = {0.001, 0.1, 0.25, 0.5, 0.8, 1, 1.2, 1.5, 1.55, 1.6, 1.75};
+		
+		int survivors[] = new int[strengthRatios.length];
+		
+		for (int count=0; count<strengthRatios.length; count++)
+		{
+			double partOne = Math.pow(victorTroops, 2);
+			double partThree = Math.pow(loserTroops, 2);
+			double partFour = partOne - (strengthRatios[count]*partThree);
+			
+			survivors[count] = (int)Math.pow(partFour, 0.5);
+		}	
+		
+		System.out.println("Strength Constants: " + Arrays.toString(strengthRatios));
+		System.out.println("Survivors: " + Arrays.toString(survivors));
+		System.out.println("Note: the larger the strength constant, the stronger the opposing army.");
+		
+	}
+
+}
